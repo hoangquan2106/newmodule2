@@ -2,16 +2,16 @@ package Baitapvenha;
 
 public class bai3 {
         public static void main(String[] args) {
-            int sum = 0;
+            int tong = 0;
             for (int i = 10; i < 100; i++) {
-                if (isPrime(i)) {
-                    sum += i;
+                if (sothuc(i)) {
+                    tong += i;
                 }
             }
-            System.out.println("Sum of all two-digit prime numbers: " + sum);
+            System.out.println("tổng của tất cả các SNT có 2 chữ số là: " + tong);
         }
 
-        public static boolean isPrime(int n) {
+        public static boolean sothuc(int n) {
             if (n <= 1) {
                 return false;
             }
