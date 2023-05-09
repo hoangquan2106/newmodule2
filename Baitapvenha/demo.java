@@ -1,20 +1,29 @@
 package Baitapvenha;
 
+import java.util.Arrays;
+
 public class demo {
     public static void main(String[] args) {
-        int[] arr = {5, 3, 8, 1, 9, 2};
-        int[] newArr = new int[arr.length + 1];
-        int value = 10;
-        int index = 3;
-        for (int i = 0, j = 0; i < newArr.length; i++) {
-            if (i == index) {
-                newArr[i] = value;
-            } else {
-                newArr[i] = arr[j];
-                j++;
+        int[] arr = {2, 4, 2, 6, 8, 2, 1, 2};
+        int[] newArr = abc(arr);
+        System.out.println(Arrays.toString(newArr));
+    }
+
+    public static int[] abc(int[] arr) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 2) {
+                count++;
             }
         }
-        System.out.println("Mảng mới là: " + );
+        int[] newArr = new int[arr.length - count];
+        int index = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 2) {
+                newArr[index] = arr[i];
+                index++;
+            }
+        }
+        return newArr;
     }
 }
-
